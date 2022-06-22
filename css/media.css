@@ -49,4 +49,25 @@
     grid-column: 1/5;
     text-align: center !important;
   }
+  .contentBox{
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+
+  .contentBox .content {
+    width: 300px;
+    height: 200px;
+  }
+
+  .contentBox .imgBx {
+    width: 200px;
+    height: 200px;
+    margin:0 auto;
+  }
+  
+  .contentBox .imgBx::before {
+    width: 100px;
+    height: 100px;
+  }
 }

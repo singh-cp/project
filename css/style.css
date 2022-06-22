@@ -321,3 +321,88 @@ footer span {
 
 }
 /* Detail End */
+
+
+/* Coupon */
+
+#coupon{
+  display:none;
+  z-index:1000;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contentBox {
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0 5px 15px rgba(65, 99, 135, 0.6);
+}
+
+.contentBox .imgBx {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentBox .imgBx::before {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.contentBox .imgBx img {
+  position: relative;
+  max-width: 250px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.contentBox .content {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentBox .content h3{
+  color: #333;
+  line-height: 1em;
+  font-weight: bolder;
+  font-size:2em;
+}
+.contentBox .content h4{
+  font-size: 1em;
+  line-height: 1em;
+}
+.contentBox .content span{
+  color:#333;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+.contentBox .content p{
+  font-weight: bold;
+}
+
+#closeCoupon{
+  position: absolute;
+  top:20px;
+  left:90%;
+  width:60px;
+  height:60px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 100000;
+}
