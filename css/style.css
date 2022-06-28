@@ -406,3 +406,12 @@ footer span {
   border-radius: 50%;
   z-index: 100000;
 }
+
+/* Weather */
+
+#weather h3{
+  padding-right: 2rem!important;
+  padding-left: 1rem!important;
+  font-size:1rem!important;
+  text-align: center !important;
+}

@@ -65,12 +65,17 @@
                 </div>
             </div>
         </nav>
-        <div class="w-75 m-auto">
-            <form class="d-flex">
-                <input class="form-control me-2 text-center" type="search" placeholder="City, State" aria-label="Search">
-                <button class="btn btn-success" type="submit"><i class="bi bi-search"></i></button>
-              </form>
+        <div class="d-flex">
+            <div class="w-75 m-auto">
+                <form class="d-flex">
+                    <input class="form-control me-2 text-center" type="search" placeholder="City, State"
+                        aria-label="Search">
+                    <button title="Submit" class="btn btn-success" type="submit"><i class="bi bi-search"></i></button>
+                </form>
             </div>
+            <div id="weather">
+            </div>
+        </div>
     </header>
     <div>
         <div class="modal fade" id="loginBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -137,6 +142,11 @@
         <p><span id="year"></span> &copy; All rights reserved.</p>
     </footer>
     <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    <script src="./JS/weather.js"></script>
+    <script>
+        // Weather
+        window.onLoad = myGetWeather();
+    </script>
 </body>
 
 </html>
