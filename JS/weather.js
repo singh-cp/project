@@ -16,7 +16,7 @@ function weatherDetails(lon, lat) {
         .then(res => res.json())
         .then(data => {
             weather.innerHTML = `
-            <h3>${data.name}</h3>
-            <h3>${data.main.temp}&deg; C</h3>`
+            <p>${data.name}</p>
+            <p>${data.main.temp}&deg; C</p>`
         });
 }
