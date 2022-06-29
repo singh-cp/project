@@ -351,7 +351,7 @@ header {
   box-shadow: var(--box-shadow);
 }
 
-.profiles .box:hover {
+.profiles .box:hover, .listing-profile:hover {
   transform: scale(1.02);
   transition: 0.25s all linear;
 }
