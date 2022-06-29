@@ -5,387 +5,299 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listing Page</title>
-    <link rel="shortcut icon" href="./images/Logo-favicon.png" type="image/x-icon">
-    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
-    <!-- CSS End -->
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;1,600;1,900&display=swap"
-        rel="stylesheet">
-    <!-- Google Font -->
-    <!-- Bootstrap 5 Start-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap 5 End -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./images/mylogo.png" type="image/x-icon">
+    <title>Listing Page | Show Me Around</title>
 </head>
 
 <body>
     <!-- Header Start -->
-    <header id="top" class="mb-5">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand logo-custom" href="index.html"><img
-                        src="./images/Project-Logo.png"
-                        alt="Logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="bi bi-text-right custom-blue"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto custom-menu">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./listing.html">All Locals</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                Offers
-                            </a>
-                        </li>
-                    </ul>
-                    <div>
-                        <!-- Login Form Start -->
-                        <button class="btn btn-success custom-button" data-bs-toggle="modal"
-                            data-bs-target="#loginBackdrop"><i class="bi bi-box-arrow-in-right"></i> Log In</button>
-
-                        <a href="./sign-up.html" class="btn btn-success custom-button"><i class="bi bi-person-plus-fill"></i> Sign Up</a>
-                        <!-- Login Form End -->
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="d-flex">
-            <div class="w-75 m-auto">
-                <form class="d-flex">
-                    <input class="form-control me-2 text-center" type="search" placeholder="City, State"
-                        aria-label="Search">
-                    <button title="Submit" class="btn btn-success" type="submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
-            <div id="weather">
-            </div>
-        </div>
+    <header>
+        <div id="header"></div>
     </header>
-    <div>
-        <div class="modal fade" id="loginBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row mb-2" method="post">
-                            <div class="col-12 mt-3">
-                                <label for="loginEmail" class="visually-hidden">Email</label>
-                                <input type="email" class="form-control" id="loginEmail" value="" placeholder="Email">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <label for="inputPassword" class="visually-hidden">Password</label>
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <button type="submit" class="btn btn-success custom-button greenbtn">Login</button>
-                            </div>
-                        </form>
-                        <p>Doesn't have an account? <a href="./sign-up.html" class="custom-anchor">Sign Up</a> </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Header End -->
     <main>
         <div class="container">
-            <section style="margin-bottom: 5%;">
-                <h1>Choose from total 120 Locals in City</h1>
-            </section>
+            <h1>Choose from total 120 Locals in City</h1>
             <div class="custom-grid">
                 <div class="filter-grid">
-                    <button class="btn btn-primary custom-button" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i
-                            class="bi bi-funnel"></i> Filter</button>
-
-                    <div class="offcanvas offcanvas-start" tabindex="11" id="offcanvasWithBackdrop"
-                        aria-labelledby="offcanvasWithBackdropLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Filter</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
+                    <button type="button" class="btn" id="listing-filter">Filter</button>
+                    <form action="" class="filter-form">
+                        <div class="filter-content">
+                            <p>Sort</p>
+                            <div class="filter-options">
+                                <div>
+                                    <input class="form-check-input" type="radio" name="sortradio" id="sortradio1"
+                                        checked>
+                                    <label class="form-check-label" for="sortradio1">
+                                        Relevance
+                                    </label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="radio" name="sortradio" id="sortradio3">
+                                    <label class="form-check-label" for="sortradio3">
+                                        Rating
+                                    </label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="radio" name="sortradio" id="sortradio4">
+                                    <label class="form-check-label" for="sortradio4">
+                                        Cost: Low to High
+                                    </label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="radio" name="sortradio" id="sortradio5">
+                                    <label class="form-check-label" for="sortradio5">
+                                        Cost: High to Low
+                                    </label>
+                                </div>
+                            </div>
+                            <p>Gender</p>
+                            <div class="filter-options">
+                                <div>
+                                    <input class="form-check-input" type="radio" name="genderradio" id="malegender">
+                                    <label class="form-check-label" for="malegender">
+                                        Male
+                                    </label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="radio" name="genderradio" id="femalegender">
+                                    <label class="form-check-label" for="femalegender">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <p>Price</p>
+                            <div class="filter-options">
+                                <div>
+                                    <input class="form-check-input" type="radio" name="price" id="cost800">
+                                    <label class="form-check-label" for="cost800">
+                                        Less than ₹800
+                                    </label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="radio" name="price" id="cost800-1500">
+                                    <label class="form-check-label" for="cost800-1500">
+                                        Between ₹800-₹1500
+                                    </label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="radio" name="price" id="cost1500">
+                                    <label class="form-check-label" for="cost1500">
+                                        More than ₹1500
+                                    </label>
+                                </div>
+                            </div>
+                            <p>Language</p>
+                            <div class="filter-options">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="hindi" value="hindi">
+                                    <label class="form-check-label" for="hindi">Hindi</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="english" value="English">
+                                    <label class="form-check-label" for="english">English</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="gujrati" value="Gujrati">
+                                    <label class="form-check-label" for="gujrati">Gujrati</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="marathi" value="Marathi">
+                                    <label class="form-check-label" for="marathi">Marathi</label>
+                                </div>
+                            </div>
+                            <p>Interest</p>
+                            <div class="filter-options">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="NightLife" value="NightLife">
+                                    <label class="form-check-label" for="NightLife">NightLife</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="Sightseeing"
+                                        value="Sightseeing">
+                                    <label class="form-check-label" for="Sightseeing">Sightseeing</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="TSightseeing"
+                                        value="TSightseeing">
+                                    <label class="form-check-label" for="TSightseeing">Transport +
+                                        Sightseeing</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="ContentC" value="ContentC">
+                                    <label class="form-check-label" for="ContentC">Content Creation</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="History" value="History">
+                                    <label class="form-check-label" for="History">History & Art</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="Shopping" value="Shopping">
+                                    <label class="form-check-label" for="Shopping">Shopping</label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="Adventure" value="Adventure">
+                                    <label class="form-check-label" for="Adventure">Adventure (Trekking, Hiking
+                                        etc.)</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="offcanvas-body">
-                            <form>
-                                
-                                    <p>Sort</p>
-                                    <div>
-                                        <div class="form-check">
-                                            
-                                            <input class="form-check-input" type="radio" name="sortradio"
-                                                id="sortradio1" checked>
-                                            <label class="form-check-label" for="sortradio1">
-                                                Relevance
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="sortradio"
-                                                id="sortradio3">
-                                            <label class="form-check-label" for="sortradio3">
-                                                Rating
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="sortradio"
-                                                id="sortradio4">
-                                            <label class="form-check-label" for="sortradio4">
-                                                Cost: Low to High
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="sortradio"
-                                                id="sortradio5">
-                                            <label class="form-check-label" for="sortradio5">
-                                                Cost: High to Low
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <p>Gender</p>
-                                    <div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="genderradio"
-                                                id="malegender">
-                                            <label class="form-check-label" for="malegender">
-                                                Male
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="genderradio"
-                                                id="femalegender">
-                                            <label class="form-check-label" for="femalegender">
-                                                Female
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <p>Price</p>
-                                    <div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="price" id="cost800">
-                                            <label class="form-check-label" for="cost800">
-                                                Less than ₹800
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="price" id="cost800-1500">
-                                            <label class="form-check-label" for="cost800-1500">
-                                                Between ₹800-₹1500
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="price" id="cost1500">
-                                            <label class="form-check-label" for="cost1500">
-                                                More than ₹1500
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <p>Language</p>
-                                    <div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="hindi" value="hindi">
-                                            <label class="form-check-label" for="hindi">Hindi</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="english"
-                                                value="English">
-                                            <label class="form-check-label" for="english">English</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gujrati"
-                                                value="Gujrati">
-                                            <label class="form-check-label" for="gujrati">Gujrati</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="marathi"
-                                                value="Marathi">
-                                            <label class="form-check-label" for="marathi">Marathi</label>
-                                        </div>
-                                    </div>
-
-
-
-                                    <p>Interest</p>
-                                    <div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="NightLife"
-                                                value="NightLife">
-                                            <label class="form-check-label" for="NightLife">NightLife</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="Sightseeing"
-                                                value="Sightseeing">
-                                            <label class="form-check-label" for="Sightseeing">Sightseeing</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="TSightseeing"
-                                                value="TSightseeing">
-                                            <label class="form-check-label" for="TSightseeing">Transport + Sightseeing</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="ContentC" value="ContentC">
-                                            <label class="form-check-label" for="ContentC">Content Creation</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="History" value="History">
-                                            <label class="form-check-label" for="History">History & Art</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="Shopping" value="Shopping">
-                                            <label class="form-check-label" for="Shopping">Shopping</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="Adventure" value="Adventure">
-                                            <label class="form-check-label" for="Adventure">Adventure (Treking, Hiking etc.)</label>
-                                        </div>
-                                    </div>
-                                
-                                <button type="reset" class="btn btn-primary custom-button">Reset</button>
-                                <button type="submit" class="btn btn-success custom-button greenbtn">Submit</button>
-                            </form>
-                        </div>
-                    </div>
+                        <button type="reset" class="btn">Reset</button>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
                 </div>
-                <!-- Filter End  -->
-                <!-- Listing Start -->
                 <div class="result-grid">
-                    <div class="card mb-3 bg-card-custom p-3 custom-hover" style="max-width: 800px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="./images/Michael-Gray.jpg"
-                                    class="img-fluid rounded-circle" alt="Michael
-                                    Gray">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h2 class="card-title"><a href="./details-page.html" class="custom-anchor">Michael
-                                            Gray</a></h2>
-                                    <p class="card-text m-0"><small class="text-muted"><i
-                                                class="bi bi-geo-alt-fill"></i>
-                                            Lorem, ipsum.</small></p>
-                                    <p class="card-text m-0"><small class="text-muted"><i class="bi bi-star"></i>
-                                            4.8 Star</small></p>
-                                    <p class="card-text m-0"><small class="text-muted"><i class="bi bi-cash-stack"></i>
-                                            ₹400 / Hour</small></p>
-                                    <p>I will show you the historic Udaipur.</p>
-                                    <div>
-                                        <a href="./details-page.html" class="btn btn-success custom-button greenbtn"><i class="bi bi-chevron-double-right"></i> Visit Profile</a>
-                                    </div>
-                                </div>
+
+                    <div class="listing-profile">
+                        <div class="listing-image">
+                            <img src="./images/Grace-Burgess.jpg" class="" alt="Grace Burgess">
+                        </div>
+                        <div class="listing-content">
+                            <p class="price">₹499 / Hour</p>
+                            <p class="location">Kochi, IN</p>
+                            <div class="custom-ratings">
+                                <p>Reviews: 7</p>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></p>
 
                             </div>
+                            <h2 class=""><a href="./details-page.html">Grace Burgess</a></h2>
+                            <p>"See God's Own Country"</p>
+                            <a href="./details-page.html" class="btn">Visit
+                                Profile</a>
                         </div>
                     </div>
-                    <div class="card mb-3 bg-card-custom p-3 custom-hover" style="max-width: 800px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="./images/Billy-Kimber.jpg"
-                                    class="img-fluid rounded-circle" alt="Billy
-                                    Kimber">
+
+                    <div class="listing-profile">
+                        <div class="listing-image">
+                            <img src="./images/Michael-Gray.jpg" class="" alt="Michael
+                            Gray">
+                        </div>
+                        <div class="listing-content">
+                            <p class="price">₹400 / Hour</p>
+                            <p class="location">Chennai, IN</p>
+                            <div class="custom-ratings">
+                                <p>Reviews: 3</p>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h2 class="card-title"><a href="details-page.html" class="custom-anchor">Billy
-                                            Kimber</a></h2>
-                                    <p class="card-text m-0"><small class="text-muted"><i
-                                                class="bi bi-geo-alt-fill"></i>
-                                            Lorem, ipsum.</small></p>
-                                    <p class="card-text m-0"><small class="text-muted"><i class="bi bi-star"></i>
-                                            4.8 Star</small></p>
-                                    <p class="card-text m-0"><small class="text-muted"><i class="bi bi-cash-stack"></i>
-                                            ₹700 / Hour</small></p>
-                                    <p>I will show you the best restaurant for your food blog.</p>
-                                    <div>
-                                        <a href="./details-page.html" class="btn btn-success custom-button greenbtn"><i class="bi bi-chevron-double-right"></i> Visit Profile</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <h2 class=""><a href="./details-page.html">Michael
+                                    Gray</a></h2>
+                            <p>"Explore local cuisine with me."</p>
+                            <a href="./details-page.html" class="btn">Visit
+                                Profile</a>
                         </div>
                     </div>
-                    <div class="card mb-3 bg-card-custom p-3 custom-hover" style="max-width: 800px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="./images/Grace-Burgess.jpg"
-                                    class="img-fluid rounded-circle" alt="Grace Burgess">
+
+
+                    <div class="listing-profile">
+                        <div class="listing-image">
+                            <img src="./images/Alfie-Solomons.jpg" class="" alt="Alfie Solomons">
+                        </div>
+                        <div class="listing-content">
+                            <p class="price">₹750 / Hour</p>
+                            <p class="location">Udaipur, IN</p>
+                            <div class="custom-ratings">
+                                <p>Reviews: 9</p>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half"></i></p>
+
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h2 class="card-title"><a href="details-page.html" class="custom-anchor">Grace Burgess</a></h2>
-                                    <p class="card-text m-0"><small class="text-muted"><i
-                                                class="bi bi-geo-alt-fill"></i>
-                                            Lorem, ipsum.</small></p>
-                                    <p class="card-text m-0"><small class="text-muted"><i class="bi bi-star"></i>
-                                            4.9 Star</small></p>
-                                    <p class="card-text m-0"><small class="text-muted"><i class="bi bi-cash-stack"></i>
-                                            ₹1500 / Hour</small></p>
-                                    <p>I will show you the shopping area of Jaipur.</p>
-                                    <div>
-                                        <a href="./details-page.html" class="btn btn-success custom-button greenbtn"><i class="bi bi-chevron-double-right"></i> Visit Profile</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <h2 class=""><a href="./details-page.html">Alfie Solomons</a></h2>
+                            <p>"I will show you the historic Udaipur."</p>
+                            <a href="./details-page.html" class="btn">Visit
+                                Profile</a>
                         </div>
                     </div>
-                    <!-- Pagination Start -->
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-col-between flex-wrap">
-                            <li class="page-item disabled">
-                                <a class="page-link">Previous</a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- Pagination End -->
+
+
+
+                    <div class="listing-profile">
+                        <div class="listing-image">
+                            <img src="./images/Arthur-Shelby.jpg" class="" alt="Arthur Shelby">
+                        </div>
+                        <div class="listing-content">
+                            <p class="price">₹990 / Hour</p>
+                            <p class="location">Jaipur, IN</p>
+                            <div class="custom-ratings">
+                                <p>Reviews: 20</p>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half"></i></p>
+
+                            </div>
+                            <h2 class=""><a href="./details-page.html">Arthur Shelby</a></h2>
+                            <p>"I will take you to beautiful forts of Jaipur."</p>
+                            <a href="./details-page.html" class="btn">Visit
+                                Profile</a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="listing-profile">
+                        <div class="listing-image">
+                            <img src="./images/Polly-Gray.jpg" class="" alt="Polly Gray">
+                        </div>
+                        <div class="listing-content">
+                            <p class="price">₹870 / Hour</p>
+                            <p class="location">Varanasi, IN</p>
+                            <div class="custom-ratings">
+                                <p>Reviews: 20</p>
+                                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half"></i></p>
+
+                            </div>
+                            <h2 class=""><a href="./details-page.html">Polly Gray</a></h2>
+                            <p>"Learn yoga and spiritualize your soul."</p>
+                            <a href="./details-page.html" class="btn">Visit
+                                Profile</a>
+                        </div>
+                    </div>
+
                 </div>
-                <!-- Listing End -->
+            </div>
+            <div class="pagination">
+                <a href="" id="active-pagination">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">Next</a>
             </div>
         </div>
     </main>
-
-    <footer>
-        <ul>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
-            <li><a>Sitemap</a></li>
-            <li><a>Privacy Policy</a></li>
-            <li><a>Careers</a></li>
-            <li><a>Terms & Conditions</a></li>
-        </ul>
-        <p><span id="year"></span> &copy; All rights reserved.</p>
+    <!-- Footer Start-->
+    <footer id="footer">
     </footer>
-    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
-    <script src="./JS/weather.js"></script>
-    <script>
-        // Weather
-        window.onLoad = myGetWeather();
-    </script>
+    <!-- Footer End-->
+    <div id="jsFiles">
+        <script defer src="./js/main.js"></script>
+        <script defer src="./js/header.js"></script>
+        <script defer src="./js/footer.js"></script>
+        <script defer src="./js/menu.js"></script>
+        <script defer src="./js/theme.js"></script>
+        <script src="./js/coupon.js"></script>
+        <script src="./js/weather.js"></script>
+        <script>
+            window.onLoad = setTimeout(function () {
+                loadCoupons();
+            }, 2000);
+        </script>
+        <script>
+            window.onLoad = geolocation();
+        </script>
+    </div>
 </body>
 
 </html>

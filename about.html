@@ -13,36 +13,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="./images/mylogo.png" type="image/x-icon">
-    <title>Login Page | Show Me Around</title>
+        <link rel="shortcut icon" href="./images/mylogo.png" type="image/x-icon">
+    <title>About | Show Me Around</title>
 </head>
 
 <body>
     <!-- Header Start -->
-    <header id="header">
+    <header>
+        <header id="header">
+        </header>
     </header>
     <!-- Header End -->
-    <!-- Login Page Start-->
+    <!-- About Page Start-->
     <main>
         <div class="container">
-            <div class="login">
-                <div class="login-content">
-                    <h1>Log In</h1>
-                    <p>Please enter your email and password</p>
-                    <form action="" class="login-form">
-                        <label for="loginemail">Your Email</label>
-                        <input type="email" name="login" id="loginemail" placeholder="abc@example.com" value="">
-                        <label for="loginpassword">Your Password</label>
-                        <input type="password" name="password" id="loginpassword" placeholder="*******" value="">
-                        <button class="btn" type="submit">Login</button>
-                    </form>
-                    <a href="#" class="forgotpass">Forgot Password?</a>
-                    <a href="./sign-up.html" class="btn">Create New Account</a>
+            <!-- About -->
+            <div class="about" id="about">
+                <div class="about-img">
+                    <img src="./images/about.jpg" alt="">
+                </div>
+                <div class="about-text">
+                    <h1>About Us</h1>
+                    <h2>We help you in exploring the true world by connecting you with local people.</h2>
                 </div>
             </div>
-        </div>
+            <!-- USPs -->
+            <div class="sales" id="sales">
+                
+                <div class="box">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Meet New People</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, ratione.</p>
+                </div>
+                
+                <div class="box">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3>Explore Cities with Localites</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, ratione.</p>
+                </div>
+                
+                <div class="box">
+                    <i class="fa-solid fa-gopuram"></i>
+                    <h3>Experience Cultures & Languages</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, ratione.</p>
+                </div>
+            </div>
     </main>
-    <!-- Login Page End-->
+    <!-- About Page End-->
     <!-- Footer Start-->
     <footer id="footer">
     </footer>
@@ -55,11 +72,6 @@
         <script defer src="./js/theme.js"></script>
         <script src="./js/coupon.js"></script>
         <script src="./js/weather.js"></script>
-        <script>
-            window.onLoad = setTimeout(function () {
-                loadCoupons();
-            }, 2000);
-        </script>
         <script>
             window.onLoad = geolocation();
         </script>
