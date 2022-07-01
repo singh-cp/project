@@ -1,0 +1,42 @@
+[
+    {
+        "country": "India",
+        "country_id": 1,
+        "city": "Udaipur",
+        "city_id":1,
+        "state": "Rajasthan",
+        "state_id": 1
+    },
+    {
+        "country": "India",
+        "country_id": 1,
+        "city": "Jaipur",
+        "city_id":2,
+        "state": "Rajasthan",
+        "state_id": 1
+    },
+    {
+        "country": "India",
+        "country_id": 1,
+        "city": "Jodhpur",
+        "city_id":3,
+        "state": "Rajasthan",
+        "state_id": 1
+    },
+    {
+        "country": "India",
+        "country_id": 1,
+        "city": "Delhi",
+        "city_id":4,
+        "state": "Delhi",
+        "state_id": 2
+    },
+    {
+        "country": "India",
+        "country_id": 1,
+        "city":"Mumbai",
+        "city_id":5,
+        "state": "Maharashtra",
+        "state_id": 3
+    }
+]
