@@ -56,6 +56,14 @@
                     <a href="./sign-up.html" class="btn">Sign Up</a>
                 </div>
             </div>
+            <div class="dynamic-dropdown">
+                <select id="city_API" onchange="getLocals()">
+                    <option value="nothing">Select a City</option>
+                </select>
+                <select id="local_API">
+                    <option value="">Select a Local</option>
+                </select>
+            </div>
             <!-- Locals -->
             <div class="locals" id="locals">
                 <div class="heading">
@@ -177,6 +185,7 @@
         <script defer src="./js/theme.js"></script>
         <script defer src="./js/coupon.js"></script>
         <script preconnect src="./js/weather.js"></script>
+        <script preconnect src="./js/dummyAPI.js"></script>
         <script>
             window.onLoad = setTimeout(function () {
                 loadCoupons();
@@ -184,6 +193,7 @@
         </script>
         <script>
             window.onLoad = setTimeout(function () { geolocation(); }, 3000);
+            window.onLoad = getCity();
         </script>
     </div>
 </body>
