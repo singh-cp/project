@@ -852,8 +852,8 @@ header {
 
 .dynamic-dropdown select {
   padding: 5px;
-  outline: 2px solid var(--main-color);
+  outline: 2px solid var(--second-color);
   font-size: 1rem;
-  color: var(--second-color);
+  color: var(--main-color);
   text-align: center;
 }
