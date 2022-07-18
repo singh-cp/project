@@ -1,5 +1,5 @@
-const cityURL = "../data/location.json";
-const localURL = "../data/profiles.json";
+const cityURL = "https://singh-cp.github.io/project/data/location.json";
+const localURL = "https://singh-cp.github.io/project/data/profiles.json";
 function getCity() {
   fetch(cityURL, { method: "GET" })
     .then((response) => response.json())
